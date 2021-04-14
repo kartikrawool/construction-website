@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-home',
+  styleUrls: ['./home.component.css'],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
 
@@ -13,3 +17,4 @@ export class HomeComponent implements OnInit {
   }
 
 }
+//styleUrls: ['./home.component.css'],
