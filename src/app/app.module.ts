@@ -15,6 +15,7 @@ import { ProjectComponent } from './components/site/project/project.component';
 import { SingleProjectComponent } from './components/site/single-project/single-project.component';
 import { ContactComponent } from './components/site/contact/contact.component';
 import { LoginComponent } from './components/site/login/login.component';
+import { RegisterComponent } from './components/site/register/register.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { LoginComponent } from './components/site/login/login.component';
     ProjectComponent,
     SingleProjectComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

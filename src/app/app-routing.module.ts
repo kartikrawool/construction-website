@@ -7,6 +7,7 @@ import { AboutComponent } from './components/site/about/about.component';
 import { ContactComponent } from './components/site/contact/contact.component';
 import { HomeComponent } from './components/site/home/home.component';
 import { LoginComponent } from './components/site/login/login.component';
+import { RegisterComponent } from './components/site/register/register.component';
 import { ProjectComponent } from './components/site/project/project.component';
 import { ServiceComponent } from './components/site/service/service.component';
 import { SingleProjectComponent } from './components/site/single-project/single-project.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'project', component: ProjectComponent },
   { path: 'service', component: ServiceComponent },
   { path: 'single-project/:id', component: SingleProjectComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
