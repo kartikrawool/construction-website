@@ -2,6 +2,21 @@
   <a routerLinkActive="active" routerLink="/home">Home</a>
   <a routerLinkActive="active" routerLink="/register">Register</a>
 </nav>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+function validate(){
+  var user = document.getElementById("username");
+  var pass = document.getElementById("password");
+  if(user == 'admin' && pass == 'admin'){
+  return true}
+  else{
+return false}
+  }
+</script>
+
 <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,12 +28,13 @@
           <form>
               <div class="form-group">
                   <label for="inputName">Username</label>
-                  <input class="form-control" type="text" class="form-control" autofocus required>
+                  <input class="form-control" id="username" type="text" class="form-control" autofocus required>
               </div>
 
               <div class="form-group">
                   <label for="inputLocation">Password</label>
-                  <input class="form-control" type="password" class="form-control" autofocus required>
+                  <input class="form-control" id="password" type="password" class="form-control" autofocus required>
               </div>
-              <button [routerLink] = "'/portfolio-list'" name="login" id="login" class="btn btn-block login-btn mb-4 btn-outline-danger">Login</button>
+              <button name="login" id="login" onclick="validate()" class="btn btn-block login-btn mb-4 btn-outline-danger">Login</button>
               </form>
+              
