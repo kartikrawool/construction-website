@@ -1,1 +1,24 @@
-<p>login works!</p>
+<nav>
+  <a routerLinkActive="active" routerLink="/home">Home</a>
+  <a routerLinkActive="active" routerLink="/register">Register</a>
+</nav>
+<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<div class="row justify-content-center">
+  <div class="col-md-4 register-employee">
+      <!-- form card register -->
+      <div class="card-body">
+          <h1 style="text-align: center;">Login</h1>
+          <form>
+              <div class="form-group">
+                  <label for="inputName">Username</label>
+                  <input class="form-control" type="text" class="form-control" autofocus required>
+              </div>
+
+              <div class="form-group">
+                  <label for="inputLocation">Password</label>
+                  <input class="form-control" type="password" class="form-control" autofocus required>
+              </div>
+              <button [routerLink] = "'/portfolio-list'" name="login" id="login" class="btn btn-block login-btn mb-4 btn-outline-danger">Login</button>
+              </form>
