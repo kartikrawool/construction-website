@@ -15,6 +15,10 @@ function validate(){
   else{
 return false}
   }
+  function redirectMe() {
+  window.location.replace("http://localhost:4200/portfolio-list");
+  return false;
+}
 </script>
 
 <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
@@ -25,7 +29,7 @@ return false}
       <!-- form card register -->
       <div class="card-body">
           <h1 style="text-align: center;">Login</h1>
-          <form>
+          <form onsubmit="return redirectMe();">
               <div class="form-group">
                   <label for="inputName">Username</label>
                   <input class="form-control" id="username" type="text" class="form-control" autofocus required>
