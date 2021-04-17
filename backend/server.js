@@ -20,6 +20,7 @@ mongoose.connect(dbConfig.db, {
 
 // Setting up port with express js
 const portfolioRoute = require('../backend/routes/portfolio.route')
+const messageRoute = require('../backend/routes/message.route')
 const app = express();
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({
@@ -30,7 +31,9 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist/construction-website')));
 app.use('/', express.static(path.join(__dirname, 'dist/construction-website')));
 app.use('/api', portfolioRoute)
+app.use('/api/message', messageRoute)
 app.use('/images', express.static(path.join('images')));
+
 // Create port
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
