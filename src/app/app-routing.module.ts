@@ -11,10 +11,12 @@ import { RegisterComponent } from './components/site/register/register.component
 import { ProjectComponent } from './components/site/project/project.component';
 import { ServiceComponent } from './components/site/service/service.component';
 import { SingleProjectComponent } from './components/site/single-project/single-project.component';
+import { MessageListComponent } from './components/message-list/message-list.component';
 
 const routes: Routes = [
 
   { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'admin', pathMatch: 'full', redirectTo: 'login' },
   { path: 'create-portfolio', component: PortfolioCreateComponent },
   { path: 'edit-portfolio/:id', component: PortfolioEditComponent },
   { path: 'portfolio-list', component: PortfolioListComponent },
@@ -26,6 +28,7 @@ const routes: Routes = [
   { path: 'single-project/:id', component: SingleProjectComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'message-list', component: MessageListComponent }
 ];
 
 @NgModule({

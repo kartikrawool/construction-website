@@ -16,6 +16,7 @@ import { SingleProjectComponent } from './components/site/single-project/single-
 import { ContactComponent } from './components/site/contact/contact.component';
 import { LoginComponent } from './components/site/login/login.component';
 import { RegisterComponent } from './components/site/register/register.component';
+import { MessageListComponent } from './components/message-list/message-list.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RegisterComponent } from './components/site/register/register.component
     SingleProjectComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MessageListComponent
   ],
   imports: [
     BrowserModule,
