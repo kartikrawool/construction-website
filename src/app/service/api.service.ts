@@ -53,6 +53,27 @@ export class ApiService {
     )
   }
 
+  //create message
+  createMessage(data: any): Observable<any> {
+    let url = `${this.baseUri}/message/create`;
+    return this.http.post(url, data)
+      .pipe(
+        catchError(this.errorMgmt)
+      )
+  }
+
+  //get all messages
+  getMessages() {
+    return this.http.get(`${this.baseUri}/message`);
+  }
+
+  // Delete message
+  deleteMessage(id: any): Observable<any> {
+    let url = `${this.baseUri}/message/delete/${id}`;
+    return this.http.delete(url, { headers: this.headers }).pipe(
+      catchError(this.errorMgmt)
+    )
+  }
   // Error handling 
   errorMgmt(error: HttpErrorResponse) {
     let errorMessage = '';
